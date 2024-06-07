@@ -15,11 +15,11 @@ export const useFavoritesStore = create<PhotosState>()(
       toggleFavorite: photo =>
         set(state => {
           const isFavorite = state.favorites.some(item => item.id === photo.id);
-          const newPhotos = isFavorite
+          const newFavorites = isFavorite
             ? state.favorites.filter(item => item.id !== photo.id)
             : [...state.favorites, photo];
 
-          return { favorites: newPhotos };
+          return { favorites: newFavorites };
         })
     }),
     { name: 'favorites' }
