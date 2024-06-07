@@ -1,0 +1,45 @@
+#root {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sticky-button {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  width: 170px;
+}
+
+.dashboard-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
