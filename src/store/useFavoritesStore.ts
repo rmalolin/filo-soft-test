@@ -3,12 +3,12 @@ import { persist } from 'zustand/middleware';
 
 import { Photo } from '../types/Photo';
 
-interface PhotosState {
+interface FavoritesState {
   favorites: Photo[];
   toggleFavorite: (photo: Photo) => void;
 }
 
-export const useFavoritesStore = create<PhotosState>()(
+export const useFavoritesStore = create<FavoritesState>()(
   persist(
     set => ({
       favorites: [],
