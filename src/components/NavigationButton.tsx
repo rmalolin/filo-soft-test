@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface NavigationButtonProps {
   path: string;
@@ -6,12 +6,10 @@ interface NavigationButtonProps {
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({ path, buttonText }) => {
-  const navigate = useNavigate();
-
   return (
-    <button className='sticky-button' onClick={() => navigate(path)}>
-      {buttonText}
-    </button>
+    <Link to={path}>
+      <button className='sticky-button'>{buttonText}</button>
+    </Link>
   );
 };
 
